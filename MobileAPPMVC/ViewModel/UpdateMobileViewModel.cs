@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MobileAPPMVC.ViewModel
+{
+    public class UpdateMobileViewModel:AddMobileViewModel
+    {
+        public int Id { get; set; }
+    }
+}

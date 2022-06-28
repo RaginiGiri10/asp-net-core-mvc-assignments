@@ -1,0 +1,46 @@
+﻿@model DeleteMobileViewModel
+
+<h2 style="color:darkred"><i>Are you sure you want to delete?</i></h2>
+<hr />
+
+<form asp-controller="Mobile" asp-action="DeleteMobile" method="post">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <label asp-for="Name"></label>
+        </div>
+        <div class="col-sm-3">
+
+@Model.Name
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <label asp-for="Manufacturer"></label>
+    </div>
+    <div class="col-sm-3">
+
+@Model.Manufacturer
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <label>Amount</label>
+    </div>
+    <div class="col-sm-3">
+
+@Model.Amount
+</div>
+</div>
+
+<div class="row">
+    <div class=" col-sm-12">
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a class="btn btn-success" asp-controller="Mobile" asp-action="Index">Cancel</a>
+    </div>
+
+</div>
+</form>

@@ -1,0 +1,33 @@
+﻿@model AddMobileViewModel
+
+<h1 style="color:darkslategrey"><i><u>Add Mobile:</u></i></h1>
+    <hr />
+
+
+
+<form asp-action="AddMobile" asp-controller="Mobile" method="post">
+
+        <div class="form-group">
+
+
+            <label asp-for="Name"></label>
+            <input type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <label>Manufacturer</label>
+            <select class="form-control" asp-for="ManufacturerId" asp-items="@Model.ManufactureList"></select>
+            <span asp-validation-for="ManufacturerId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Amount"></label>
+            <input type="text" asp-for="Amount" class="form-control" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
